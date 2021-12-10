@@ -1,1 +1,79 @@
 /* You can add global styles to this file, and also import other style files */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto', Arial, sans-serif;
+    @media (max-width: 1080px) {
+        font-size: 93.75%;
+    }
+    @media (max-width: 768px) {
+        font-size: 87.5%;
+    }
+}
+
+ul,
+li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+input,
+button {
+    outline: none !important;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+:root {
+    --color-background: #f7f7f7;
+    --color-primary: #8b57f8;
+    --color-primary-ligth: #d3beff;
+    --color-secondary: #eef1fb;
+    --text-color-primary: #707073;
+    --text-color-secondary: #b3b2b4;
+    --input-border-primary: #ededed;
+    --input-border-invalid: rgb(248, 121, 121);
+}
+
+
+/* Animação Float Left*/
+
+.floatLeft {
+    opacity: 0;
+    transform: translateX(-80px);
+    animation: fadeInLeft .4s forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: initial;
+    }
+}
+
+
+/* CSS SCROLL */
+
+::-webkit-scrollbar {
+    width: 0.6rem !important
+}
+
+::-webkit-scrollbar-track {
+    background: #e1e1e1 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #A839FF !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #A839FF !important;
+}
+
+
+/* FIM CSS SCROLL */
