@@ -22,7 +22,7 @@ export class LoginGuard implements CanActivate {
     return new Promise(resolve =>{
       this.authService.getAuth().onAuthStateChanged(user => {
         if (user){
-          this.router.navigate(['/home']);
+          this.router.navigate(['home']);
         }
         resolve(!user ? true: false);
       });
