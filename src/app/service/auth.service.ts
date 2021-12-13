@@ -17,8 +17,9 @@ export class AuthService {
   }
 
   register(user: User){
-    const email:string = user.email as string;
-    const password:string = user.password as string;
+    const email = user.email as string;
+    const password = user.password as string;
+    console.log()
     return this.afa.createUserWithEmailAndPassword(email, password);
   }
 
