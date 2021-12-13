@@ -2,11 +2,11 @@
     <section class="section-login floatLeft">
         <h1>Faça seu cadastro</h1>
         <form action="submit">
-            <input type="text" name="name" id="name" placeholder="Nome">
-            <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
-            <input type="email" name="email" id="email" placeholder="E-mail">
-            <input type="password" name="pass" id="pass" placeholder="Senha">
-            <button type="submit" [routerLink]="['/']">Cadastrar</button>
+            <input type="text" name="name" placeholder="Nome" [(ngModel)]="userRegister.nome">
+            <input type="text" name="sobrenome" placeholder="Sobrenome" [(ngModel)]="userRegister.sobrenome">
+            <input type="email" name="email" id="email" placeholder="E-mail" [(ngModel)]="userRegister.email">
+            <input type="password" name="pass" id="pass" placeholder="Senha" [(ngModel)]="userRegister.password">
+            <button type="submit" (click)="register()">Cadastrar</button>
         </form>
         <span>Já tem uma conta?<a [routerLink]="['/login']"> Logar</a></span>
     </section>

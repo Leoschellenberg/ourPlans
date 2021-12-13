@@ -14,7 +14,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

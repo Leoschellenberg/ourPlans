@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core'
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { User } from '../interfaces/user';
 
 @Injectable({
@@ -8,7 +9,10 @@ import { User } from '../interfaces/user';
 export class AuthService {
   isLoggedIn: any;
 
-  constructor(private afa: AngularFireAuth) { }
+  constructor(
+    private afa: AngularFireAuth,
+    private afs: AngularFirestore
+    ) { }
 
   login(user: User){
     const email= user.email as string;
@@ -17,10 +21,12 @@ export class AuthService {
     return this.afa.signInWithEmailAndPassword(email, password);
   }
 
-  register(user: User){
+  async register(user: User){
     const email = user.email as string;
     const password = user.password as string;
-    return this.afa.createUserWithEmailAndPassword(email, password);
+    const newUser = await this.afa.createUserWithEmailAndPassword(email, password);
+    await this.afs.collection('Users').doc(newUser.user?.uid).set(user);
+    return newUser
   }
 
   logout(){
