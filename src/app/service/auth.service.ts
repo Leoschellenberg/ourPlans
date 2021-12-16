@@ -14,11 +14,10 @@ export class AuthService {
     private afs: AngularFirestore
     ) { }
 
-  login(user: User){
-    const email= user.email as string;
-    const password= user.password as string;
-    console.log(email, password)
-    return this.afa.signInWithEmailAndPassword(email, password);
+  async login(user: User){
+    const email = user.email as string;
+    const password = user.password as string;
+    return await this.afa.signInWithEmailAndPassword(email, password);
   }
 
   async register(user: User){
