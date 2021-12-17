@@ -14,6 +14,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    SignupComponent
+    SignupComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),

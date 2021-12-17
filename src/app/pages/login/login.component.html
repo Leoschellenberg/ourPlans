@@ -9,8 +9,8 @@
             <input type="email" name="email" id="email" placeholder="E-mail" [(ngModel)]="userLogin.email">
             <input type="password" name="password" id="pass" placeholder="Senha" [(ngModel)]="userLogin.password">
             <button type="submit" (click)="login()">Login</button>
+            <span>Esqueceu sua <a [routerLink]="['/forgotPassword']">senha?</a></span>
+            <span>Não tem conta?<a [routerLink]="['/signup']"> Criar</a></span>
         </form>
-        <span>Esqueceu sua <a href="http://">senha?</a></span>
-        <span>Não tem conta?<a [routerLink]="['/signup']"> Criar</a></span>
     </section>
 </main>
