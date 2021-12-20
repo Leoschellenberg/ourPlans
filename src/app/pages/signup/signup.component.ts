@@ -35,7 +35,7 @@ export class SignupComponent implements OnInit {
       this.spinner.hide();
     }finally {
       this.spinner.hide();
-      this.snak.openSnackBar('Cadastro efetuado com sucesso!', 'Fechar', 'my-snack-bar-sucess');
+      this.snak.openSnackBar(`Olá ${this.userRegister.nome}, seu cadastro foi efetuado com sucesso!`, 'Fechar', 'my-snack-bar-sucess');
     }
   }
 }
