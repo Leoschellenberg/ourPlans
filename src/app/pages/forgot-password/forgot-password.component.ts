@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { SnackBarComponent } from 'src/app/components/snack-bar/snack-bar.component';
 import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/service/auth.service';
 
@@ -13,7 +14,8 @@ export class ForgotPasswordComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private snak: SnackBarComponent
   ) { }
 
   ngOnInit(): void {
@@ -23,12 +25,15 @@ export class ForgotPasswordComponent implements OnInit {
     this.spinner.show();
     try {
       await this.authService.resetPasswordToEmail(this.userResetPass);
-    } catch (err) {
-      console.error(err);
+      this.snak.openSnackBar('E-mail enviado com sucesso!', 'Fechar', 'my-snack-bar-sucess');
+    } catch ({code, message}) {
+      const codigo = code as string;
+      const mensagem = message as string;
+      this.snak.openSnackBar(mensagem,codigo, "my-snack-bar-fail");
+      console.log(message)
       this.spinner.hide();
-    }finally {
-      console.log("EMAIL ENVIADOa")
+    }finally{
       this.spinner.hide();
-    }
+      }
     }
 }
