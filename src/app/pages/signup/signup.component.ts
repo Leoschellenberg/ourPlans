@@ -3,6 +3,7 @@ import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/service/auth.service';
 
 import { NgxSpinnerService } from "ngx-spinner";
+import { SnackBarComponent } from 'src/app/components/snack-bar/snack-bar.component';
 
 @Component({
   selector: 'app-signup',
@@ -14,21 +15,27 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private snak: SnackBarComponent
   ) { }
 
   ngOnInit(): void {
   }
 
   async register() {
-    this.spinner.show();
     try {
-     await this.authService.register(this.userRegister);
-    } catch (err) {
-      console.error(err);
+      this.spinner.show();
+      const userRegister = await this.authService.register(this.userRegister);
+    } catch ({code, message}) {
+      const error = message as string;
+      const codeError = code as string;
+
+      this.snak.openSnackBar(error, codeError, "my-snack-bar-fail");
+
       this.spinner.hide();
     }finally {
       this.spinner.hide();
+      this.snak.openSnackBar('Cadastro efetuado com sucesso!', 'Fechar', 'my-snack-bar-sucess');
     }
   }
 }

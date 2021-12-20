@@ -35,4 +35,8 @@ export class AuthService {
   getAuth(){
     return this.afa;
   }
+
+  resetPasswordToEmail({ email }: User){
+      return this.afa.sendPasswordResetEmail(email as string)
+  }
 }

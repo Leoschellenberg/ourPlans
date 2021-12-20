@@ -7,6 +7,7 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
@@ -23,7 +26,9 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     LoginComponent,
     HomeComponent,
     SignupComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    SnackBarComponent,
+    MenuComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -34,6 +39,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     HttpClientModule,
     FormsModule,
     NgxSpinnerModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
