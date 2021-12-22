@@ -9,6 +9,7 @@ import { User } from '../interfaces/user';
 export class AuthService {
   isLoggedIn: any;
 
+
   constructor(
     private afa: AngularFireAuth,
     private afs: AngularFirestore

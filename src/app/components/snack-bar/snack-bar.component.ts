@@ -22,7 +22,7 @@ export class SnackBarComponent implements OnInit {
 
   openSnackBar(error: string, message: string | undefined, tipo: string) {
    return  this._snackBar.open(error, message, {
-      duration: 5000,
+      duration: 8000,
       panelClass: [tipo],
       horizontalPosition: 'right',
       verticalPosition: 'top'

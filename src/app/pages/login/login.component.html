@@ -7,7 +7,7 @@
         <h1>Faça o login</h1>
         <form action="submit">
             <input type="email" name="email" id="email" placeholder="E-mail" [(ngModel)]="userLogin.email">
-            <input type="password" name="password" id="pass" placeholder="Senha" [(ngModel)]="userLogin.password">
+            <input type="password" name="password" id="pass" placeholder="Senha" [(ngModel)]="userLogin.password" minlength="8">
             <button type="submit" (click)="login()">Login</button>
             <span>Esqueceu sua <a [routerLink]="['/forgotPassword']">senha?</a></span>
             <span>Não tem conta?<a [routerLink]="['/signup']"> Criar</a></span>

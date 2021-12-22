@@ -9,17 +9,8 @@ import { AuthService } from 'src/app/service/auth.service';
 export class HomeComponent implements OnInit {
 
   constructor(
-    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
-  }
-
-  async logout() {
-    try {
-      await this.authService.logout();
-    } catch (err) {
-      console.error(err);
-    }
   }
 }
