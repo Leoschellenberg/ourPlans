@@ -1,0 +1,154 @@
+section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    header {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        //background-color: #f7f7f7;
+        //border-radius: 0 0 2rem 2rem;
+        background: url(../../../assets/wave.svg) no-repeat;
+        background-size: cover;
+        .profile-header {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            justify-items: center;
+            align-content: center;
+            img {
+                border-radius: 50%;
+                height: 8rem;
+                width: 8rem;
+            }
+            h2 {
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                color: var(--text-color-primary);
+            }
+        }
+    }
+    .div-form {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        form {
+            display: grid;
+            gap: 1rem;
+            width: 100%;
+            text-align: center;
+            max-width: 30rem;
+            height: 70%;
+            padding: 0 1rem;
+            span {
+                font-size: 1rem;
+                color: var(--text-color-primary);
+                a {
+                    font-weight: bold;
+                    color: var(--color-primary);
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                }
+            }
+            input {
+                padding: 1rem;
+                border: 3px solid var(--input-border-primary);
+                border-radius: 5rem;
+                color: var(--text-color-primary);
+                font-weight: 600;
+                height: 1rem;
+                &::placeholder {
+                    color: var(--text-color-secondary);
+                }
+                &:focus,
+                &:hover {
+                    border-color: var(--color-primary-ligth);
+                }
+                &:invalid {
+                    border-color: var(--input-border-invalid);
+                }
+            }
+            button {
+                padding: 1rem;
+                border-radius: 5rem;
+                background-color: var(--color-primary);
+                border: none;
+                color: #fff;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+                &:hover {
+                    filter: brightness(90%);
+                }
+            }
+        }
+    }
+}
+
+// section {
+//     display: flex;
+//     height: calc(100% - 14.39vh);
+//     justify-content: center;
+//     align-items: center;
+//     align-content: center;
+//     flex-direction: column;
+//     padding: 0 5rem;
+//     mat-list {
+//         display: flex;
+//         flex-direction: column;
+//         width: 100%;
+//     }
+//     h1 {
+//         font-size: 2rem;
+//         color: var(--text-color-primary);
+//     }
+//     form {
+//         display: grid;
+//         gap: 1rem;
+//         width: 100%;
+//         max-width: 30rem;
+//         text-align: center;
+//         span {
+//             font-size: 1rem;
+//             color: var(--text-color-primary);
+//             a {
+//                 font-weight: bold;
+//                 color: var(--color-primary);
+//                 text-decoration: none;
+//                 font-size: 1.2rem;
+//             }
+//         }
+//     }
+//     input {
+//         padding: 1rem;
+//         border: 3px solid var(--input-border-primary);
+//         border-radius: 5rem;
+//         color: var(--text-color-primary);
+//         font-weight: 600;
+//         &::placeholder {
+//             color: var(--text-color-secondary);
+//         }
+//         &:focus,
+//         &:hover {
+//             border-color: var(--color-primary-ligth);
+//         }
+//         &:invalid {
+//             border-color: var(--input-border-invalid);
+//         }
+//     }
+//     button {
+//         padding: 1rem;
+//         border-radius: 5rem;
+//         background-color: var(--color-primary);
+//         border: none;
+//         color: #fff;
+//         font-weight: bold;
+//         text-transform: uppercase;
+//         letter-spacing: .2rem;
+//         &:hover {
+//             filter: brightness(90%);
+//         }
+//     }
+// }

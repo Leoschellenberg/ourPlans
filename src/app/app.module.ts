@@ -10,6 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +23,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 @NgModule({
@@ -30,7 +35,9 @@ import { MenuComponent } from './components/menu/menu.component';
     SignupComponent,
     ForgotPasswordComponent,
     SnackBarComponent,
-    MenuComponent
+    MenuComponent,
+    MenuMobileComponent,
+    ProfileComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -43,7 +50,10 @@ import { MenuComponent } from './components/menu/menu.component';
     NgxSpinnerModule,
     MatSnackBarModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTabsModule,
+    MatInputModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],
