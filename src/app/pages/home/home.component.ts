@@ -27,8 +27,6 @@ export class HomeComponent implements OnInit {
     .collection(user?.uid as string)
     .snapshotChanges().subscribe((doc) => {
       this.UserPlans = doc.map(c => ({ key: c.payload.doc.id, ...c.payload.doc.data() }))
-      console.log(this.UserPlans)
-      //console.log(doc.)
     });
   }
 }
