@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class MenuComponent implements OnInit {
   public UserData: any = {};
+  public showFiller = false;
 
   constructor(
     private auth: AuthService,

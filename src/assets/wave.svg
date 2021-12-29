@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3000" height="400" preserveAspectRatio="xMidYMid" viewBox="0 0 3000 400" style="z-index:1;margin-right:-2px;display:block;animation-play-state:paused" ><g transform="translate(1500,200) scale(1,1) translate(-1500,-200)" style="transform:matrix(1, 0, 0, 1, 0, 0);animation-play-state:paused" ><linearGradient id="lg-0.8398258680815496" x1="0" x2="1" y1="0" y2="0" style="animation-play-state:paused" ><stop stop-color="#f2f2f2" offset="0" style="animation-play-state:paused" ></stop>
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3000" height="400" preserveAspectRatio="xMidYMid" viewBox="0 0 3000 400" style="z-index:1;margin-right:-2px;display:block;animation-play-state:paused" ><g transform="translate(1500,200) scale(1,1) translate(-1500,-200)" style="transform:matrix(1, 0, 0, 1, 0, 0);animation-play-state:paused" ><linearGradient id="lg-0.8398258680815496" x1="0" x2="1" y1="0" y2="0" style="animation-play-state:paused" ><stop stop-color="#8b57f8" offset="0" style="animation-play-state:paused" ></stop>
 
-  
-<stop stop-color="#ffffff" offset="1" style="animation-play-state:paused" ></stop></linearGradient>
-<path d="M 0 0 L 0 348.25 Q 375 373.611 750 341.57 T 1500 320.743 T 2250 260.604 T 3000 229.418 L 3000 0 Z" fill="url(#lg-0.8398258680815496)" opacity="0.4" style="opacity:0.4;animation-play-state:paused" ></path>
-<path d="M 0 0 L 0 336.654 Q 375 358.207 750 326.532 T 1500 316.163 T 2250 270.1 T 3000 256.504 L 3000 0 Z" fill="url(#lg-0.8398258680815496)" opacity="0.4" style="opacity:0.4;animation-play-state:paused" ></path></g></svg>
+
+<stop stop-color="#8b57f8" offset="1" style="animation-play-state:paused" ></stop></linearGradient>
+<path d="M 0 0 L 0 348.25 Q 375 373.611 750 341.57 T 1500 320.743 T 2250 260.604 T 3000 229.418 L 3000 0 Z" fill="url(#lg-0.8398258680815496)" opacity="1" style="opacity:0.8;animation-play-state:paused" ></path>
+<path d="M 0 0 L 0 336.654 Q 375 358.207 750 326.532 T 1500 316.163 T 2250 270.1 T 3000 256.504 L 3000 0 Z" fill="url(#lg-0.8398258680815496)" opacity="1" style="opacity:0.8;animation-play-state:paused" ></path></g></svg>

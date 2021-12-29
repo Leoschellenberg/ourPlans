@@ -1,46 +1,34 @@
 <div class="container-menu">
+
+    <mat-drawer-container class="example-container" autosize hasBackdrop>
+
+        <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
+
+            <div class="menu-header">
+                <div class="div-btn-close">
+                    <button mat-icon-button (click)="drawer.toggle()" class="material-icons btn-close">close</button>
+                </div>
+                <img src="https://i.picsum.photos/id/101/2621/1747.jpg?hmac=cu15YGotS0gIYdBbR1he5NtBLZAAY6aIY5AbORRAngs" alt="Avatar">
+                <h2>Olá, {{ UserData.nome }}</h2>
+            </div>
+            <button mat-menu-item [routerLink]="['/profile']">
+              <mat-icon>manage_accounts</mat-icon>
+              <span>Perfil</span>
+            </button>
+            <button mat-menu-item (click)="logout()">
+              <mat-icon>logout</mat-icon>
+              <span>Sair</span>
+            </button>
+        </mat-drawer>
+    </mat-drawer-container>
+
     <header>
         <a [routerLink]="['/home']">
-            <svg width="80" height="80" viewBox="0 0 105 117" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 38.9106C0 34.7608 3.66652 31.3968 8.18942 31.3968H17.2563V93.3853H8.18942C3.66652 93.3853 0 90.0213 0 85.8716V38.9106Z" fill="#A839FF"/>
-            <path d="M0 77.5527H53.8162V94.1903H8.18942C3.66652 94.1903 0 90.8263 0 86.6766V77.5527Z" fill="#A839FF"/>
-            <path d="M104.123 54.7431H61.7131V70.3073H104.123V54.7431Z" fill="#A839FF"/>
-            <path d="M61.7131 101.436H0V117H61.7131V101.436Z" fill="#A839FF"/>
-            <path d="M78.6769 54.7431H61.7131V117H78.6769V54.7431Z" fill="#A839FF"/>
-            <path d="M53.8162 31.3968H26.0306V46.4243H53.8162V31.3968Z" fill="#F2F2F2"/>
-            <path d="M87.4513 31.3968H61.7131V46.4243H87.4513V31.3968Z" fill="#F2F2F2"/>
-            <path d="M105 77.5527H87.4513V117H105V77.5527Z" fill="#F2F2F2"/>
-            <path d="M87.4513 8.05048H105V38.9106C105 43.0603 101.334 46.4243 96.8106 46.4243H87.4513V8.05048Z" fill="#F2F2F2"/>
-            <path d="M53.8162 55.0115H26.0306V70.039H53.8162V55.0115Z" fill="#F2F2F2"/>
-            <path d="M17.8412 0H8.18941C3.66653 0 0 3.36403 0 7.51376V16.3693C0 20.519 3.66653 23.883 8.18941 23.883H17.8412C22.3641 23.883 26.0306 20.519 26.0306 16.3693V7.51376C26.0306 3.36403 22.3641 0 17.8412 0Z" fill="#F2F2F2"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M83.29151,5.375c-7.43395,0 -13.41651,5.98255 -13.41651,13.4165v0.04199c0,7.43395 5.98255,13.4165 13.41651,13.4165h0.04199c7.43395,0 13.41651,-5.98255 13.41651,-13.4165v-0.04199c0,-7.43395 -5.98255,-13.4165 -13.41651,-13.4165zM107.29004,13.84167l-1.54321,5.14929c10.19463,3.07057 19.53427,8.47272 27.27918,15.77856l-5.76868,3.81604l19.98828,10.02564l-2.64551,-21.5l-6.9917,4.62964c-8.51867,-8.319 -18.91923,-14.45922 -30.31836,-17.89917zM40.16028,16.78638l3.61133,7.19641c-8.87774,6.17645 -16.30248,14.2138 -21.7572,23.55237c-0.7821,1.34638 -1.52221,2.71813 -2.22034,4.11523l4.80811,2.3988c0.64697,-1.29521 1.33721,-2.56897 2.06287,-3.81604c4.92459,-8.43552 11.58362,-15.72968 19.53686,-21.40027l3.39087,6.76599l12.57141,-18.8125zM86,51.0625c-17.81118,0 -32.25,14.43882 -32.25,32.25c0,17.81118 14.43882,32.25 32.25,32.25c17.81118,0 32.25,-14.43882 32.25,-32.25c0,-17.81118 -14.43882,-32.25 -32.25,-32.25zM147.79151,56.4375c-7.43395,0 -13.41651,5.98255 -13.41651,13.41651v0.04199c0,7.43395 5.98255,13.41651 13.41651,13.41651h0.04199c7.43395,0 13.41651,-5.98255 13.41651,-13.41651v-0.04199c0,-7.43395 -5.98255,-13.41651 -13.41651,-13.41651zM24.1665,59.125c-7.43395,0 -13.4165,5.98255 -13.4165,13.41651v0.04199c0,7.43395 5.98255,13.41651 13.4165,13.41651h0.04199c7.43395,0 13.4165,-5.98255 13.4165,-13.41651v-0.04199c0,-7.43395 -5.98255,-13.41651 -13.4165,-13.41651zM102.36646,67.77014l4.12573,3.43811l-23.03796,27.64661c-0.90789,1.08785 -2.50477,1.28315 -3.64807,0.44617l-11.52161,-8.44568l3.18091,-4.3357l9.47974,6.95496zM10.75,91.57446c0.00692,4.84972 0.4833,9.68739 1.42249,14.44531h4.88684c3.17872,0.05045 5.95379,2.1658 6.84473,5.21753c1.12213,3.51695 2.54461,6.93089 4.25171,10.2041c1.53959,2.78392 1.0771,6.24728 -1.13904,8.52966l-3.47485,3.46436c5.44865,8.0678 12.40519,15.00651 20.48694,20.43445l3.47485,-3.4696c2.29437,-2.2097 5.75971,-2.66919 8.55066,-1.13379c3.28268,1.70343 6.70532,3.12236 10.23035,4.24121c3.05108,0.88116 5.17126,3.64846 5.22803,6.82373v4.87109c9.5652,1.89551 19.40941,1.89551 28.97461,0v-4.87109c0.05676,-3.17527 2.17695,-5.94257 5.22803,-6.82373c3.52503,-1.11885 6.94767,-2.53778 10.23035,-4.24121c2.79095,-1.53541 6.25629,-1.07591 8.55066,1.13379l3.47485,3.4696c8.08175,-5.42793 15.03829,-12.36665 20.48694,-20.43445l-3.47485,-3.46436c-2.21614,-2.28238 -2.67863,-5.74574 -1.13904,-8.52966c1.7071,-3.27321 3.12958,-6.68715 4.25171,-10.2041c0.89036,-3.0499 3.66271,-5.1648 6.83948,-5.21753h4.88684c0.94095,-4.75775 1.41909,-9.59542 1.42773,-14.44531h-27.22143c-2.8209,24.39064 -23.47534,42.79396 -48.02857,42.79396c-24.55322,0 -45.20766,-18.40332 -48.02857,-42.79396z"></path></g></g></svg>
         </a>
-
-        <form class="example-form">
-            <mat-icon matSuffix>search</mat-icon>
-            <input type="search" name="search" id="search" placeholder="Busque por Item ou Loja">
-        </form>
         <nav>
-            <button mat-icon-button aria-label="Icon Menu Cart" class="material-icons">shopping_bag
-        </button>
-
-            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="material-icons">person
-        </button>
-            <mat-menu #menu="matMenu" class="mat-menu">
-                <span mat-menu-item disabled>Olá {{ UserData.nome }}</span>
-                <button mat-menu-item>
-              <mat-icon>list_alt</mat-icon>
-              <span>Pedidos</span>
-            </button>
-                <button mat-menu-item [routerLink]="['/profile']">
-                <mat-icon>manage_accounts</mat-icon>
-                <span>Perfil</span>
-              </button>
-                <button mat-menu-item (click)="logout()">
-                <mat-icon>logout</mat-icon>
-                <span>Sair</span>
-              </button>
-            </mat-menu>
+            <button mat-icon-button (click)="drawer.toggle()" aria-label="Example icon-button with a menu" class="material-icons">menu</button>
+            <mat-menu #menu="matMenu" class="mat-menu"></mat-menu>
         </nav>
     </header>
 </div>

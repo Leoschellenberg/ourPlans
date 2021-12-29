@@ -8,7 +8,7 @@ section {
         display: flex;
         width: 100%;
         justify-content: center;
-        //background-color: #f7f7f7;
+        background-color: #f7f7f7;
         //border-radius: 0 0 2rem 2rem;
         background: url(../../../assets/wave.svg) no-repeat;
         background-size: cover;
@@ -26,7 +26,7 @@ section {
             h2 {
                 text-transform: uppercase;
                 font-size: 1.2rem;
-                color: var(--text-color-primary);
+                color: #fff;
             }
         }
     }
